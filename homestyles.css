@@ -12,7 +12,10 @@
 }
 
 
-body{ color:var(--font) ;
+body{
+    
+    
+    color:var(--font) ;
 overflow-x: hidden;
 background-color: var(--STRONG);
 }
@@ -203,6 +206,7 @@ background-color: var(--STRONG);
     padding-left:40px;
     box-shadow: var(--font)  0px 0px 2px ;
     text-shadow: 0px 0px 2px var(--font) ;
+    transform: rotate(-1deg);
 
 }
 
@@ -221,8 +225,59 @@ background-color: var(--STRONG);
     width:15%;
 
     box-shadow: var(--font)  0px 0px 4px;
-    
+
+
+animation: rotation;
+animation-duration: 4s;
+animation-timing-function:linear;
+animation-iteration-count: infinite;
+animation-fill-mode:both;
+animation-play-state: running;
+
 }
+  @keyframes rotation {
+    
+    
+    0%{
+        transform: rotate(0deg);
+        box-shadow: maroon 0px 0px 8px;
+    }
+    10%{
+        box-shadow: maroon 0px 0px 8px;
+    }
+    20%{
+        box-shadow: var(--font) 0px 0px 8px;
+    }
+    30%{
+        box-shadow: maroon 0px 0px 8px;
+    }
+    40%{
+        box-shadow: var(--font) 0px 0px 8px;
+    }
+    50%{
+        box-shadow: maroon 0px 0px 8px;
+    }
+    60%{
+        box-shadow: var(--font) 0px 0px 8px;
+    }
+    70%{
+        box-shadow: maroon 0px 0px 8px;
+    }
+    80%{
+        box-shadow: var(--font) 0px 0px 8px;
+    }
+    90%{
+        box-shadow: 
+        maroon 0px 0px 8px;
+    }
+    
+    100%{
+        box-shadow: var(--font) 0px 0px 8px;
+        transform: rotate(360deg);
+    }
+    
+  }
+
 .head{
     white-space: wrap;
     
@@ -314,6 +369,7 @@ background-color: var(--STRONG);
    text-shadow: white 0px 0px 5px;
    cursor:grab;
    letter-spacing: 25px;
+   
 }
 .scammers{
    
@@ -379,11 +435,16 @@ em{
 
         
     }
-    .bar , .datetime{
+    .bar  {
 
         font-size: 0.6rem;
         position: sticky;
         top: 0%;
+    }
+    .datetime{
+        font-family: sans-serif;
+        text-shadow: white 0px 0px;
+        color:maroon
     }
     .footer{
         position: sticky;
