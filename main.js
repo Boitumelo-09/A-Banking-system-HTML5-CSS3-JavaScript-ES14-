@@ -8,24 +8,24 @@ const thisDay = new Date().getDay()
 day.setAttribute("currentdate", thisDay)
 day.textContent=thisDay */
 const today = new Date();
-  document.getElementById("date").textContent = today.toDateString();
-  function updateClock() {
-    const now = new Date();
+document.getElementById("date").textContent = today.toDateString();
+function updateClock() {
+  const now = new Date();
 
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  let seconds = now.getSeconds();
 
-    // Add leading zeros (e.g., 08:05:03)
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+  // Add leading zeros (e.g., 08:05:03)
+  hours = hours < 10 ? "0" + hours : hours;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    const timeString = `${hours}:${minutes}:${seconds}`;
+  const timeString = `${hours}:${minutes}:${seconds}`;
 
-    document.getElementById('clock').textContent = timeString;
-  }
+  document.getElementById("clock").textContent = timeString;
+}
 
-  // Update clock every second
-  setInterval(updateClock, 1000);
-  updateClock(); 
+// Update clock every second
+setInterval(updateClock, 1000);
+updateClock();

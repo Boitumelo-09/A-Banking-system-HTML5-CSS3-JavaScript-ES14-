@@ -443,8 +443,8 @@ em{
     }
     .datetime{
         font-family: sans-serif;
-        text-shadow: white 0px 0px;
-        color:maroon
+        
+        color:maroon;
     }
     .footer{
         position: sticky;
